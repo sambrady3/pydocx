@@ -25,7 +25,7 @@ class Docx2Html(DocxParser):
     @property
     def parsed(self):
         content = super(Docx2Html, self).parsed
-        content = "<html>%(head)s<body>%(content)s</body></html>" % {
+        content = "<html><meta charset = utf-8>%(head)s<body>%(content)s</body></html>" % {
             'head': self.head(),
             'content': content,
         }
